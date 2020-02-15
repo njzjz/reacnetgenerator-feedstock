@@ -11,7 +11,7 @@ source:
     - disable_cache.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<36]
   entry_points:
     - reacnetgenerator = reacnetgenerator.commandline:_commandline
@@ -40,7 +40,7 @@ requirements:
     - scipy >=0.20.1
     - pandas
     - networkx
-    - matplotlib
+    - matplotlib-base
     - hmmlearn >=0.2.1
     - ase
     - scour
