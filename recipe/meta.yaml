@@ -1,25 +1,25 @@
 {% set name = "reacnetgenerator" %}
-{% set version = "1.4.112" %}
+{% set version = "1.4.114" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://github.com/tongzhugroup/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 1b8ed6fe12f69d9030a9fceb40cc776c5934b9097a05762b36129ad28ee665df
+  sha256: f7b05e4037c0a3e39d81c78eba0c24294d6f2b2c55c74a4a4850fec116a98cbf
   patches:
     - disable_cache.patch
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<36]
   entry_points:
     - reacnetgenerator = reacnetgenerator.commandline:_commandline
     - reacnetgeneratorgui = reacnetgenerator.gui:gui
   script:
-    - "export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}"  # [unix]
-    - "set SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}"  # [win]
-    - "{{ PYTHON }} -m pip install . --no-deps -vv"
+    - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}    # [unix]
+    - set SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}    # [win]
+    - {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -61,7 +61,7 @@ about:
   license: LGPL-3.0
   license_family: LGPL
   license_file: LICENSE
-  summary: 'An automatic generator of reaction network for reactive molecular dynamics simulation.'
+  summary: An automatic generator of reaction network for reactive molecular dynamics simulation.
   doc_url: https://reacnetgenerator.njzjz.win/
   dev_url: https://github.com/tongzhugroup/reacnetgenerator
 
