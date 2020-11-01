@@ -11,7 +11,7 @@ source:
     - disable_cache.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<36]
   entry_points:
     - reacnetgenerator = reacnetgenerator.commandline:_commandline
