@@ -8,7 +8,7 @@ source:
   url: https://github.com/tongzhugroup/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: dd040ff416afd666b12bbab87787610a948b7dc56813e20630684539e71d6cd4
   patches:
-    - disable_cache.patch
+    #- disable_cache.patch
 
 build:
   number: 0
