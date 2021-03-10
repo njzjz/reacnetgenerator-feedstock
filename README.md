@@ -3,7 +3,7 @@ About reacnetgenerator
 
 Home: http://github.com/tongzhugroup/reacnetgenerator
 
-Package license: LGPL-3.0
+Package license: LGPL-3.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/reacnetgenerator-feedstock/blob/master/LICENSE.txt)
 
