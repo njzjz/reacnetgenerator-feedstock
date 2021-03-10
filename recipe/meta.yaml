@@ -56,7 +56,7 @@ test:
 
 about:
   home: http://github.com/tongzhugroup/reacnetgenerator
-  license: LGPL-3.0
+  license: LGPL-3.0-only
   license_family: LGPL
   license_file: LICENSE
   summary: An automatic generator of reaction network for reactive molecular dynamics simulation.
