@@ -1,14 +1,12 @@
 {% set name = "reacnetgenerator" %}
-{% set version = "1.4.154" %}
+{% set version = "1.4.160" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://github.com/tongzhugroup/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: e6ee6a7c80835e1f93432f279eb1da8accec7f7489bea100b4aa8eb214f1db90
-  patches:
-    #- disable_cache.patch
+  sha256: d33939ec2f92655f963cc13f546b78bfcf21175c168c49b122e7b8d506e98791
 
 build:
   number: 0
@@ -58,7 +56,7 @@ test:
 
 about:
   home: http://github.com/tongzhugroup/reacnetgenerator
-  license: LGPL-3.0
+  license: LGPL-3.0-only
   license_family: LGPL
   license_file: LICENSE
   summary: An automatic generator of reaction network for reactive molecular dynamics simulation.
