@@ -1,12 +1,12 @@
 {% set name = "reacnetgenerator" %}
-{% set version = "1.4.160" %}
+{% set version = "1.4.162" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://github.com/tongzhugroup/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: d33939ec2f92655f963cc13f546b78bfcf21175c168c49b122e7b8d506e98791
+  sha256: f4f4b6e45c177b755403d719f3581b1b2fd3ae9aacb5f755f372781c9d79a5f3
 
 build:
   number: 0
