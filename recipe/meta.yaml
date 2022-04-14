@@ -9,7 +9,7 @@ source:
   sha256: 1e1b10f612b661f25feb37194242626418f04ab2720cd1706dd2ae4c8af0b04e
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<36]
   entry_points:
     - reacnetgenerator = reacnetgenerator.commandline:_commandline
