@@ -23,13 +23,13 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - nodejs
-    - pyyaml
   host:
     - python
     - pip
     - cython >=0.24.1
     - setuptools_scm
-    - numpy >=1.15
+    - numpy
+    - pyyaml
   run:
     - python
     - openbabel
