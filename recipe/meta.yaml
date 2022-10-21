@@ -22,13 +22,13 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - yarn
+    - nodejs
+    - pyyaml
   host:
     - python
     - pip
     - cython >=0.24.1
     - setuptools_scm
-    - pytest-runner
     - numpy >=1.15
   run:
     - python
