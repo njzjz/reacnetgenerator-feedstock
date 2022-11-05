@@ -1,12 +1,12 @@
 {% set name = "reacnetgenerator" %}
-{% set version = "1.6.5" %}
+{% set version = "1.6.7" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://github.com/tongzhugroup/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 7a6bf8567b89c97f9351a0e95d551840f2d9ee192926e51e3548c9bc043f8e5b
+  sha256: 8af36afa794f9b4a2640c40a985ed98eb718250010d2e683c8390eb78ed05374
 
 build:
   number: 0
@@ -35,7 +35,6 @@ requirements:
     - openbabel
     - rdkit >=2018.09
     - {{ pin_compatible('numpy') }}
-    - scipy >=0.20.1
     - pandas
     - networkx
     - matplotlib-base
@@ -45,8 +44,8 @@ requirements:
     - tqdm
     - coloredlogs
     - lz4
-    - pybase64
     - requests
+    - packaging
 
 test:
   imports:
