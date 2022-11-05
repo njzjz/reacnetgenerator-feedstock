@@ -35,7 +35,6 @@ requirements:
     - openbabel
     - rdkit >=2018.09
     - {{ pin_compatible('numpy') }}
-    - scipy >=0.20.1
     - pandas
     - networkx
     - matplotlib-base
@@ -45,8 +44,8 @@ requirements:
     - tqdm
     - coloredlogs
     - lz4
-    - pybase64
     - requests
+    - packaging
 
 test:
   imports:
