@@ -17,6 +17,9 @@ jobs:
       osx_64_nodejs14numpy1.21python3.10.____cpython:
         CONFIG: osx_64_nodejs14numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
+      osx_64_nodejs14numpy1.23python3.11.____cpython:
+        CONFIG: osx_64_nodejs14numpy1.23python3.11.____cpython
+        UPLOAD_PACKAGES: 'True'
       osx_64_nodejs16numpy1.20python3.8.____cpython:
         CONFIG: osx_64_nodejs16numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -26,6 +29,9 @@ jobs:
       osx_64_nodejs16numpy1.21python3.10.____cpython:
         CONFIG: osx_64_nodejs16numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
+      osx_64_nodejs16numpy1.23python3.11.____cpython:
+        CONFIG: osx_64_nodejs16numpy1.23python3.11.____cpython
+        UPLOAD_PACKAGES: 'True'
       osx_64_nodejs18numpy1.20python3.8.____cpython:
         CONFIG: osx_64_nodejs18numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -34,6 +40,9 @@ jobs:
         UPLOAD_PACKAGES: 'True'
       osx_64_nodejs18numpy1.21python3.10.____cpython:
         CONFIG: osx_64_nodejs18numpy1.21python3.10.____cpython
+        UPLOAD_PACKAGES: 'True'
+      osx_64_nodejs18numpy1.23python3.11.____cpython:
+        CONFIG: osx_64_nodejs18numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
 
