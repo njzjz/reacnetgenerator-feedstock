@@ -369,6 +369,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@DiracMD](https://github.com/DiracMD/)
+* [@Eipgen](https://github.com/Eipgen/)
 * [@njzjz](https://github.com/njzjz/)
 
