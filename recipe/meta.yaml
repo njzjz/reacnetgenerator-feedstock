@@ -1,15 +1,15 @@
 {% set name = "reacnetgenerator" %}
-{% set version = "1.6.8" %}
+{% set version = "1.6.10" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://github.com/tongzhugroup/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 5f2b0b84fabd7b933d77e4c8c182fee917d630b0471e9c1c9356e6442a9f61c2
+  sha256: c62f2ba3c292770523a4b64035be0819202d1607288d4270d4dc7a3cb743e56e
 
 build:
-  number: 2
+  number: 0
   skip: true  # [py<36]
   entry_points:
     - reacnetgenerator = reacnetgenerator.commandline:_commandline
