@@ -23,6 +23,7 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
+    - cmake >=3.26
     - nodejs
   host:
     - python
