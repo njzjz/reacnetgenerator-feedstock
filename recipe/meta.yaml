@@ -1,12 +1,12 @@
 {% set name = "reacnetgenerator" %}
-{% set version = "1.6.14" %}
+{% set version = "1.6.15" %}
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://github.com/deepmodeling/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 0d2a1d32e6513fc1408353d256967aacb35fa07074a139d1f4bd08cc67985abb
+  sha256: 69e3fb5155320e243488cb30e289d85b0c6c0d5991577af6acd2955cec0756f8
 
 build:
   number: 0
