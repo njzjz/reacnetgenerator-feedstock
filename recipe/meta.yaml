@@ -9,15 +9,16 @@ source:
   sha256: 69e3fb5155320e243488cb30e289d85b0c6c0d5991577af6acd2955cec0756f8
 
 build:
-  number: 0
-  skip: true  # [py<36]
+  number: 1
+  skip: true  # [is_abi3 and not is_python_min]
+  python_version_independent: true   # [is_abi3]
   entry_points:
     - reacnetgenerator = reacnetgenerator.commandline:_commandline
     - reacnetgeneratorgui = reacnetgenerator.gui:gui
   script:
     - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}    # [unix]
     - set SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}    # [win]
-    - {{ PYTHON }} -m pip install . --no-deps -vv
+    - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -28,6 +29,7 @@ requirements:
     - make  # [unix]
     - nodejs
   host:
+    - python-abi3  # [is_abi3]
     - python
     - pip
     - cython >=0.24.1
@@ -45,7 +47,7 @@ requirements:
     - hmmlearn >=0.2.1
     - ase
     - scour
-    - tqdm
+    - tqdm >=4.9.0
     - coloredlogs
     - lz4
     - requests
@@ -54,7 +56,13 @@ requirements:
 test:
   imports:
     - reacnetgenerator
+  requires:
+    - pip
+    - abi3audit  # [is_abi3]
   commands:
+    # - pip check
+    - abi3audit $SP_DIR/reacnetgenerator/dps.abi3.so -s -v --assume-minimum-abi3 {{ python_min }}  # [unix and is_abi3]
+    - abi3audit %SP_DIR%/reacnetgenerator/dps.pyd -s -v --assume-minimum-abi3 {{ python_min }}  # [win and is_abi3]
     - reacnetgenerator -h
 
 about:
